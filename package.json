@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development parcel index.html",
-    "build": "NODE_ENV=production parcel build index.html -d dist",
+    "dev": "NODE_ENV=development parcel public/index.html",
     "start": "NODE_ENV=production serve dist --single",
+    "build": "NODE_ENV=production parcel build public/index.html",
     "lint": "tslint --project ."
   },
   "keywords": [],
