@@ -1,14 +1,15 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
-import { decrement, increment } from "../reducers";
+import { decrement, increment, IReduxState } from "../reducers";
 
 interface IProps {
   counter: number;
   dispatch: Dispatch;
 }
 
-class Counter extends React.Component<IProps> {
+@(connect(({ counter }: IReduxState) => ({ counter })) as any)
+export default class Counter extends React.Component<IProps> {
   constructor(props) {
     super(props);
     this.increase = this.increase.bind(this);
@@ -33,5 +34,3 @@ class Counter extends React.Component<IProps> {
     this.props.dispatch(decrement());
   }
 }
-
-export default connect(({ counter }: any) => ({ counter }))(Counter);

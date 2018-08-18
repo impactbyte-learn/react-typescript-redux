@@ -3,11 +3,11 @@ import { handleActions, createAction } from "redux-actions";
 export const increment = createAction("INCREMENT");
 export const decrement = createAction("DECREMENT");
 
-interface IState {
+export interface IReduxState {
   counter: number;
 }
 
-export default handleActions<IState>(
+export default handleActions<IReduxState>(
   {
     INCREMENT: (state, action) => ({
       ...state,
