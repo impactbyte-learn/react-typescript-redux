@@ -1,5 +1,4 @@
-import { createStore, Reducer } from "redux";
-import { MapStateToProps, MapDispatchToProps } from "react-redux";
+import { createStore } from "redux";
 
 function reducer(state = { counter: 0 }, action) {
   switch (action.type) {
