@@ -15,6 +15,6 @@ const store = createStore(
   (window as any).__REDUX_DEVTOOLS_EXTENSION__ &&
     (window as any).__REDUX_DEVTOOLS_EXTENSION__()
 );
-store.subscribe(() => console.log("store change" + store.getState().counter));
+store.subscribe(() => console.log("store change", store.getState()));
 
 export default store;

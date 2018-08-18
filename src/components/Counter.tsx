@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Dispatch } from "redux";
 import { connect } from "react-redux";
+import { Dispatch } from "redux";
 
 interface IProps {
   counter: number;
@@ -8,18 +8,22 @@ interface IProps {
 }
 
 class Counter extends React.Component<IProps> {
-  render() {
-    console.log(this.props);
+  constructor(props) {
+    super(props);
+    this.addCounter = this.addCounter.bind(this);
+  }
+
+  public render() {
     return (
       <div>
         <h1>{this.props.counter}</h1>
-        <button
-          onClick={() => this.props.dispatch({ type: "INCREMENT", payload: 1 })}
-        >
-          Add
-        </button>
+        <button onClick={this.addCounter}>Add</button>
       </div>
     );
+  }
+
+  private addCounter() {
+    this.props.dispatch({ type: "INCREMENT", payload: 1 });
   }
 }
 
