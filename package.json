@@ -9,6 +9,10 @@
     "build": "NODE_ENV=production parcel build public/index.html",
     "lint": "tslint --project ."
   },
+  "alias": {
+    "react": "preact-compat",
+    "react-dom": "preact-compat"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -18,7 +22,7 @@
     "@types/react-dom": "^16.0.7",
     "@types/react-redux": "^6.0.6",
     "@types/react-router-dom": "^4.3.0",
-    "@types/redux-actions": "^2.3.0",
+    "@types/redux-logger": "^3.0.6",
     "parcel-bundler": "^1.9.7",
     "parcel-plugin-sw-precache": "^1.0.1",
     "serve": "^9.6.0",
@@ -27,11 +31,14 @@
     "typescript": "^3.0.1"
   },
   "dependencies": {
+    "preact": "^8.3.1",
+    "preact-compat": "^3.18.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
-    "redux-actions": "^2.6.1"
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   }
 }

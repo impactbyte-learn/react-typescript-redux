@@ -1,7 +1,8 @@
 import * as React from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
-import { decrement, increment, IReduxState } from "../reducers";
+import { IReduxState } from "../store/rootReducers";
+import { INCREMENT, DECREMENT } from "../store/types";
 
 interface IProps {
   counter: number;
@@ -10,7 +11,7 @@ interface IProps {
 
 @(connect(({ counter }: IReduxState) => ({ counter })) as any)
 export default class Counter extends React.Component<IProps> {
-  constructor(props) {
+  constructor(props: IProps) {
     super(props);
     this.increase = this.increase.bind(this);
     this.decrease = this.decrease.bind(this);
@@ -27,10 +28,10 @@ export default class Counter extends React.Component<IProps> {
   }
 
   private increase() {
-    this.props.dispatch(increment());
+    this.props.dispatch({ type: INCREMENT });
   }
 
   private decrease() {
-    this.props.dispatch(decrement());
+    this.props.dispatch({ type: DECREMENT });
   }
 }
