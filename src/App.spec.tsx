@@ -4,7 +4,6 @@ import App from "./App";
 
 describe("<App />", () => {
   it("Should rendered properly", () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper.exists()).toBeTruthy();
+    expect(shallow(<App />)).toBeTruthy();
   });
 });
