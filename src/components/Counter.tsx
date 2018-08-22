@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { IReduxState } from "../store/rootReducers";
 import { INCREMENT, DECREMENT } from "../store/types";
+import { increaseCounter, decreaseCounter } from "../store/actions/counter";
 
 interface IProps {
   counter: number;
@@ -21,7 +22,7 @@ const Counter = ({ counter, increase, decrease }: IProps) => (
 export default connect(
   ({ counter }: IReduxState) => ({ counter }),
   (dispatch: Dispatch) => ({
-    increase: () => dispatch({ type: INCREMENT }),
-    decrease: () => dispatch({ type: DECREMENT })
+    increase: () => increaseCounter(dispatch),
+    decrease: () => decreaseCounter(dispatch)
   })
 )(Counter);

@@ -1,5 +1,5 @@
-import store from "..";
-import { INCREMENT, DECREMENT } from "../types";
+import { INCREMENT, DECREMENT } from "./types";
+import store from "./index";
 
 describe("Counter Reducer", () => {
   it("Should increase counter", () => {
