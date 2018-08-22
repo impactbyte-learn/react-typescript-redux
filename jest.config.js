@@ -4,7 +4,7 @@ module.exports = {
     "^.+\\.tsx?$": "ts-jest"
   },
   snapshotSerializers: ["enzyme-to-json/serializer"],
-  setupFiles: ["./__tests__/setup.ts"],
+  setupFiles: ["./config/enzyme-setup.ts"],
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
   moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"]
 };
