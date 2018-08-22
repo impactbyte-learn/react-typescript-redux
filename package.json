@@ -10,12 +10,8 @@
     "test": "jest",
     "lint": "tslint --project ."
   },
-  "alias": {
-    "react": "preact-compat",
-    "react-dom": "preact-compat"
-  },
   "keywords": [],
-  "author": "",
+  "author": "Rahman Fadhil <rhmnfadhil@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^23.3.1",
@@ -35,8 +31,6 @@
     "typescript": "^3.0.1"
   },
   "dependencies": {
-    "preact": "^8.3.1",
-    "preact-compat": "^3.18.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-redux": "^5.0.7",
