@@ -5,6 +5,7 @@
 - React & ReactDOM
 - React Router
 - Redux
+- Redux Form
 - Redux Logger (development)
 - Redux Thunk
 - Parcel Bundler
