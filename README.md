@@ -14,6 +14,7 @@
 - Enzyme
 - Service Workers (PWA)
 - Dockerfile
+- Circle CI
 - etc.
 
 ## How to use
