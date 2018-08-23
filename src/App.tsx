@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Provider } from "react-redux";
-import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import store from "./store";
 
 import Contact from "./components/Contact";

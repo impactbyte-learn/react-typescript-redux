@@ -2,7 +2,6 @@ import * as React from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { IReduxState } from "../store/rootReducers";
-import { INCREMENT, DECREMENT } from "../store/types";
 import { increaseCounter, decreaseCounter } from "../store/actions/counter";
 
 interface IProps {
