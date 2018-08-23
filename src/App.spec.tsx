@@ -1,9 +1,11 @@
 import * as React from "react";
-import { shallow } from "enzyme";
+import * as ReactDOM from "react-dom";
 import App from "./App";
 
 describe("<App />", () => {
-  it("Should rendered properly", () => {
-    expect(shallow(<App />)).toBeTruthy();
+  it("Should render app properly", () => {
+    const div = document.createElement("div");
+    ReactDOM.render(<App />, div);
+    ReactDOM.unmountComponentAtNode(div);
   });
 });
