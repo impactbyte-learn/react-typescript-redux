@@ -1,15 +1,15 @@
-import { INCREMENT, DECREMENT } from "./types";
-import store from "./index";
+import { increaseCounter, decreaseCounter } from "../../store/actions/counter";
+import store from "../../store";
 
-describe("Counter Reducer", () => {
+describe("Counter Action", () => {
   it("Should increase counter", () => {
     const currentState = store.getState();
-    store.dispatch({ type: INCREMENT });
+    increaseCounter(store.dispatch);
     expect(store.getState().counter).toBe(currentState.counter + 1);
   });
   it("Should decrease counter", () => {
     const currentState = store.getState();
-    store.dispatch({ type: DECREMENT });
+    decreaseCounter(store.dispatch);
     expect(store.getState().counter).toBe(currentState.counter - 1);
   });
 });

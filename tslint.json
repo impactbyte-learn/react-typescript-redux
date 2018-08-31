@@ -4,10 +4,8 @@
     "trailing-comma": false,
     "no-console": false,
     "ordered-imports": false,
-    "jsx-boolean-value": false,
     "object-literal-sort-keys": false,
-    "arrow-parens": false,
     "jsx-no-multiline-js": false,
-    "no-shadowed-variable": false
+    "switch-default": true
   }
 }

@@ -1,8 +1,8 @@
 import * as React from "react";
 import { reduxForm, Field } from "redux-form";
 
-const required = value => (value ? null : "This field is required");
-const email = value =>
+const required = (value) => (value ? null : "This field is required");
+const email = (value) =>
   /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
     ? null
     : "E-Mail is invalid";
@@ -21,7 +21,7 @@ const Input = ({ input, placeholder, type, meta }) => (
 const Contact = (form: any) => (
   <div>
     <h1>Contact Page</h1>
-    <form onSubmit={form.handleSubmit(e => console.log(e))}>
+    <form onSubmit={form.handleSubmit((e) => console.log(e))}>
       <Field
         component={Input}
         placeholder="Name"

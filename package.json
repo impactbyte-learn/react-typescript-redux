@@ -8,7 +8,31 @@
     "start": "NODE_ENV=production serve dist --single",
     "build": "NODE_ENV=production parcel build public/index.html",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "precommit": "pretty-quick"
+  },
+  "jest": {
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "setupFiles": [
+      "./src/__tests__/setup.ts"
+    ],
+    "testRegex": "(/__tests__/*|(\\.|/)(test|spec))\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   },
   "keywords": [],
   "author": "Rahman Fadhil <rhmnfadhil@gmail.com>",
@@ -27,10 +51,13 @@
     "enzyme": "^3.4.4",
     "enzyme-adapter-react-16": "^1.2.0",
     "enzyme-to-json": "^3.3.4",
+    "husky": "^0.14.3",
     "jest": "^23.5.0",
     "jest-enzyme": "^6.0.3",
     "parcel-bundler": "^1.9.7",
     "parcel-plugin-sw-precache": "^1.0.1",
+    "prettier": "^1.14.2",
+    "pretty-quick": "^1.6.0",
     "serve": "^10.0.0",
     "ts-jest": "^23.1.4",
     "tslint": "^5.11.0",
