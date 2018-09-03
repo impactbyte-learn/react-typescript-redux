@@ -15,6 +15,8 @@
 - Service Workers (PWA)
 - Dockerfile
 - Circle CI
+- CSS Loader
+- File Loader
 - etc.
 
 ## How to use

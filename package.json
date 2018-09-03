@@ -16,13 +16,15 @@
       "<rootDir>/src"
     ],
     "transform": {
-      "^.+\\.tsx?$": "ts-jest"
+      "^.+\\.tsx?$": "ts-jest",
+      "^.+\\.css?$": "jest-css-modules-transform",
+      "^[./a-zA-Z0-9$_-]+\\.(bmp|gif|jpg|jpeg|png|psd|svg|webp)$": "<rootDir>/src/__tests__/config/file-transformer.js"
     },
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
     "setupFiles": [
-      "./src/__tests__/setup.ts"
+      "./src/__tests__/config/setup.ts"
     ],
     "testRegex": "(/__tests__/*|(\\.|/)(test|spec))\\.tsx?$",
     "moduleFileExtensions": [
@@ -53,6 +55,7 @@
     "enzyme-to-json": "^3.3.4",
     "husky": "^0.14.3",
     "jest": "^23.5.0",
+    "jest-css-modules-transform": "^2.0.0",
     "jest-enzyme": "^6.0.3",
     "parcel-bundler": "^1.9.7",
     "parcel-plugin-sw-precache": "^1.0.1",
