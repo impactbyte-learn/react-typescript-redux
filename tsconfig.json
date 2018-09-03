@@ -5,5 +5,5 @@
     "strict": true,
     "jsx": "react"
   },
-  "include": ["node_modules/@types"]
+  "include": ["node_modules/@types", "./src/types"]
 }

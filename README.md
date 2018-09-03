@@ -17,6 +17,8 @@
 - Circle CI
 - CSS Loader
 - File Loader
+- Tailwind
+- PostCSS
 - etc.
 
 ## How to use
