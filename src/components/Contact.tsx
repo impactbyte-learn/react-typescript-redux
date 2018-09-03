@@ -1,11 +1,9 @@
 import * as React from "react";
 import { reduxForm, Field } from "redux-form";
+import { isEmail } from "validator";
 
 const required = (value) => (value ? null : "This field is required");
-const email = (value) =>
-  /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
-    ? null
-    : "E-Mail is invalid";
+const email = (value) => (isEmail(value) ? null : "E-Mail is invalid");
 
 const Input = ({ input, placeholder, type, meta }) => (
   <div>
